@@ -1,0 +1,10 @@
+{%extends "blog/base.html"%}
+  {%block content%}
+    <div id="login"  class="container">
+      <form>
+          <legend>Logged out </legend>
+          
+          <small style="padding-top: 10pt;"> log back in! <a href="{% url 'user-login'%}">login</a></small>
+      </form>
+    </div>
+  {%endblock content%}

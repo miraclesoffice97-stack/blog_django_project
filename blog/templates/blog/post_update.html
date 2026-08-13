@@ -1,0 +1,29 @@
+{%extends "blog/base.html"%}
+
+  {%block content%}
+    <div id="login" class="container">
+      
+      <form method="POST" enctype="multipart/form-data">
+    
+        {%csrf_token%}
+        <legend>What's on Your Mind 📎</legend>
+        
+        <div id = "form">
+          {{psu_form}}
+          
+          {% if post.image %}
+              <img class="post-img" src="{{post.image.url}}">
+          {%endif%}
+          
+        </div>
+        
+        <div>
+            
+          <button type="submit">update</button>
+        </div>
+        
+      </form>
+      
+    </div>
+    
+  {%endblock content%}

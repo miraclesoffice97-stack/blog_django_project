@@ -1,0 +1,45 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      {%if title%}
+        <title>{{title}}</title>
+      {%else%}
+        <title>blog-pg</title>
+      {%endif%}
+      <link rel="stylesheet" href="{%static 'blog/base.css'%}">
+  </head>
+  <body>
+    <div id="navbar" class="container">
+      <h1><a href="{%url 'blog-home'%}">Mo-know</a></h1>
+      <ul>
+        
+        <li><a href="{%url 'blog-home'%}">home</a></li>
+        <li><a href="{%url 'blog-about'%}">about</a></li>
+        
+        {%if user.is_authenticated%}
+          <li><a href="{% url 'user-profile'%}">profile</a></li>
+          
+          <form method="POST" action="{%url 'user-logout'%}">
+          
+              {%csrf_token%}
+              <button class="logout" type="submit">logout</button>
+              
+          </form>
+          
+        {%else%}
+          <li><a href="{% url 'user-login'%}">login</a></li>
+        {%endif%}
+        
+      </ul>
+    </div>
+    
+    <div id="post-main" class="container">
+        {%block content%} {%endblock%}
+    </div>
+    
+  </body>
+</html>

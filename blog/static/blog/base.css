@@ -1,0 +1,330 @@
+*{
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navbar{
+    background: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 7pt;
+    display: flow-root;
+}
+
+#navbar h1 a{
+    padding-top: 10px;
+    font-size: 15px;
+    color: coral;
+    float: left;
+}
+
+#navbar ul{
+    text-decoration: none;
+    padding-top: 10px;
+    list-style: none;
+}
+
+#navbar ul li{
+    padding-left: 10pt;
+    margin-left: 14pt;
+    float: left;
+}
+
+#navbar ul li a{
+    color: whitesmoke;
+}
+
+#navbar ul li a:hover{
+    background: coral;
+    color: black;
+}
+
+
+#post-main{
+    border-width: 5pt;
+    width: 400px;
+    background: white;
+    float: right;
+    margin-right: 200pt;
+    padding-top: 10pt;
+}
+
+#post-main #post{
+    padding-left: 10pt;
+    padding-right: 10pt;
+    float: left;
+    width: 300pt;
+    background: papayawhip;
+    border-style: double;
+    border-radius: 5pt;
+    border-width: 2pt;
+    padding-top: 15pt;
+}
+
+#post h1{
+    font-size: 15pt;
+    padding-top: 10pt;
+}
+
+#post p{
+    padding-left: 5pt;
+}
+
+#post legend{
+    font-size: 15px;
+    border-top-style: groove;
+    margin-top: 5pt;
+}
+
+.post-img{
+    width: 210pt;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid navajowhite;
+    border-radius: 5pt;
+    box-shadow: inset;
+}
+
+#post-data{
+    padding-left: 40pt;
+}
+
+
+.dots {
+  cursor: pointer;
+  font-size: 22px;
+  float: right;
+}
+
+.tray {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -300px;      /* hidden below screen */
+  background: white;
+  border-radius: 16px 16px 0 0;
+  padding: 16px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+  transition: bottom 0.3s ease;   /* the sliding animation */
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tray.open {
+  bottom: 0;    /* slides into view */
+}
+
+#login{
+    padding-top: 10pt;
+    background: navajowhite;
+    padding-inline: 5pt;
+}
+
+#login form{
+    background: papayawhip;
+    padding: 5pt;
+    padding-top: 5pt;
+}
+
+#login form legend{
+    padding-bottom: 10pt;
+    border-bottom-style: solid;
+}
+
+#form {
+    padding: 10pt;
+}
+
+#message {
+    background: coral;
+    color: papayawhip;
+}
+
+#message p{
+    padding-left: 5pt;
+}
+
+#login small{
+    padding-top: 10pt;
+}
+
+#login small a{
+    color: black;
+    text-decoration: underline;
+}
+
+#banner{
+    height: 135px;
+    padding-top: 10pt;
+    border-radius: 5pt;
+    width: 300pt;
+}
+
+.banner-pic{
+    width: 280pt;
+    height: 130px;
+    object-fit: cover;
+    border: 5px solid navajowhite;
+    border-radius: 5pt;
+    box-shadow: inset;
+    border-style: groove;
+}
+
+.profile-pic{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid navajowhite; /* optional, matches your dark theme */
+}
+
+.profile-post{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid navajowhite; /* optional, matches your dark theme */
+    margin-top: 4px;
+}
+
+.post-icon{
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    z-index: 100;
+    transition: box-shadow 0.2s ease;
+    color: coral;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+
+#profile{
+    padding-left: 10pt;
+    padding-right: 10pt;
+    float: left;
+    width: 300pt;
+    background: papayawhip;
+    border-style: double;
+    border-radius: 5pt;
+    border-width: 2pt;
+}
+
+#profile h1{
+    border-top-style: hidden;
+    padding-left: 5px;
+}
+
+#profile p{
+    padding-top: 10px;
+    border-style: solid;
+    border-color: coral;
+    border-radius: 5pt;
+    padding-left: 3pt;
+}
+
+
+#bio{
+    padding-top: 5pt;
+}
+
+
+#prof{
+    padding-top: 5pt;
+}
+
+#edit-profile{
+    padding-top: 5pt;
+}
+
+.btn{
+    display: inline-block;
+    padding: 8px 16px;
+    background: coral;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5pt;
+    margin-left: 200pt;
+}
+
+
+.profile-init{
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid navajowhite;
+    margin-left: 15pt;
+    border-style: groove;
+}
+
+.bttn{
+    
+    border-radius: 8pt;
+    color: coral;
+    background: black;
+    height: 15pt;
+    font-size: 10pt;
+    border-color: coral;
+    border-style: solid;
+}
+
+.but{
+    border-radius: 5px;
+    color: white;
+    background: coral;
+    height: 15px;
+    width: 20pt;
+    font-size: 10pt;
+    border-color: coral;
+    border-style: solid;
+    margin-top: 5pt;
+}
+
+.butt{
+    border-radius: 5px;
+    color: white;
+    background: coral;
+    height: 15pt;
+    font-size: 10pt;
+    border-color: coral;
+    border-style: solid;
+    margin-top: 5pt;
+}
+
+.logout{
+    background: black;
+    color: white;
+    border-color: black;
+    border-style: solid;
+    height: 15pt;
+    float: right;
+    margin-right: 15pt;
+    padding-right: 15pt;
+    margin-bottom: 5px;
+}
+
+.logout:hover,
+.logout:active{
+    color: coral;
+}
+
+.singlepost{
+    color: black;
+}

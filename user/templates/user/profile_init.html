@@ -1,0 +1,28 @@
+{%extends "blog/base.html"%}
+  {%block content%}
+    <div id="login" class="container">
+        
+      <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        
+        <legend>Edit Profile picture</legend>
+        <a href="{% url 'blog-home'%}" class="btn">skip</a>
+        
+        {%if user.profile.profile_image%}
+        
+          <img src="{{user.profile.profile_image.url}}" alt="Profile Image" class="profile-init">
+        
+        {%endif%}
+        
+        <div id = "form">
+          {{i_form}}
+        </div>
+        
+        <div>
+          <button class="bttn" type="submit">Next</button>
+        </div>
+        
+      </form>
+      
+    </div>
+  {%endblock content%}

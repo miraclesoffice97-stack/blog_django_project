@@ -1,0 +1,19 @@
+{%extends "blog/base.html"%}
+
+  {%block content%}
+    <div id="login" class="container">
+      
+      <form method="POST" enctype="multipart/form-data">
+    
+        {%csrf_token%}
+        <legend>Confirm deletion </legend>
+        
+          <button class="butt" type="submit">update</button>
+        
+      </form>
+      
+      <a href="{% url 'blog-home'%}" class="but">cancel</a>
+      
+    </div>
+    
+  {%endblock content%}

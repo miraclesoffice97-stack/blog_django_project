@@ -1,0 +1,27 @@
+{%extends "blog/base.html"%}
+  {%block content%}
+    <div id="login" class="container">
+        
+      <form method="POST" enctype="multipart/form-data">
+        {%csrf_token%}
+        
+        <legend>Edit Banner to stand out</legend>
+        
+        {%if user.profile.banner%}
+        
+          <img src="{{user.profile.banner.url}}" alt="banner" class="banner-pic">
+        
+        {%endif%}
+        
+        <div id = "form">
+          {{b_form}}
+        </div>
+        
+        <div>
+          <button class="bttn" type="submit">Next</button>
+        </div>
+        
+      </form>
+      
+    </div>
+  {%endblock content%}
